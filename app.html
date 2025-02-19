@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base64 to Image Generator</title>
+</head>
+<body>
+    <h1>Base64 to Image Generator</h1>
+    <input type="text" id="base64Input" placeholder="Enter Base64 string here" />
+    <button id="generateButton">Generate Image</button>
+    <br />
+    <img id="outputImage" alt="Generated Image" style="margin-top: 20px; max-width: 100%;" />
+    <p id="errorMessage" style="color: red;"></p>
+    
+    <script>
+        document.getElementById('generateButton').addEventListener('click', function() {
+            const base64String = document.getElementById('base64Input').value;
+            const imgElement = document.getElementById('outputImage');
+            const errorMessage = document.getElementById('errorMessage');
+
+            // Check if the base64 string starts with a valid image prefix
+            const validPrefixes = [
+                'data:image/png;base64,',
+                'data:image/jpeg;base64,',
+                'data:image/gif;base64,',
+                'data:image/webp;base64,'
+            ];
+
+            const isValidBase64 = validPrefixes.some(prefix => base64String.startsWith(prefix));
+
+            if (!isValidBase64) {
+                errorMessage.textContent = 'Please enter a valid base64 string for an image (PNG, JPEG, GIF, WEBP).';
+                imgElement.src = '';
+                return;
+            }
+
+            imgElement.src = base64String; // Set the src of the image to the base64 string
+            errorMessage.textContent = ''; // Clear any previous error messages
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image to Base64 Generator</title>
+</head>
+<body>
+    <h1>Image to Base64 Generator</h1>
+    <input type="file" id="fileInput" accept="image/*">
+    <button id="convertButton">Convert to Base64</button>
+    <textarea id="base64Output" rows="10" cols="50" placeholder="Base64 output will appear here..."></textarea>
+
+    <script>
+        document.getElementById('convertButton').addEventListener('click', function() {
+            const fileInput = document.getElementById('fileInput');
+            const file = fileInput.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onloadend = function() {
+                    document.getElementById('base64Output').value = reader.result;
+                }
+                reader.readAsDataURL(file);
+            } else {
+                alert('Please select an image file first.');
+            }
+        });
+    </script>
+</body>
+</html>
