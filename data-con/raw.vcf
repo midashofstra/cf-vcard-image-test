@@ -1,0 +1,16 @@
+BEGIN:VCARD
+VERSION:3.0
+PHOTO;TYPE=PNG;ENCODING=b:iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAiSURBVHgB7coxEQAACMPAgH/PgAM6dGwu49fA/deIBXrgAj2cAhIFT4QxAAAAAElFTkSuQmCC
+N;CHARSET=UTF-8:Hofstra;Midas;;;
+FN;CHARSET=UTF-8:Midas Hofstra
+ORG;CHARSET=UTF-8:ConnectFlow
+TITLE:Founder
+NOTE:Wij maken de beste software voor digitale visitekaartjes.
+EMAIL;CHARSET=UTF-8;type=Email,INTERNET:midas@connectflow.io
+TEL;TYPE=Mobile:+31649643405
+TEL;TYPE=Phone:+31308993967
+URL;TYPE=Website:connectflow.io
+URL;TYPE=Business card:https://connectflow.app/p/BpQOpOYS
+URL;TYPE=Update Midas:https://connectflow.app/p/BpQOpOYS/save
+X-ABDATE;TYPE=Date connected:20240202
+END:VCARD
