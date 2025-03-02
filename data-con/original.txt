@@ -7,7 +7,7 @@ https://cdn.connectflow.app/prod/ACCOUNTzkgLPXGd/PI-ACCT-zkgLPXGd-1740751759331.
 
 
 
-Download to base 64:
+Download to base64:
 UklGRiQCAABXRUJQVlA4IBgCAADQOgCdASr0AfQBPm02mUmkIyKhIAgAgA2JaW7hd2Ee3AfgAAAT2Ae+2TkPfbJyHvtk5D32ych77ZOQ99snIe+2TkPfbJyHvtk5D32ych77ZOQ99snIe+2TkPfbJyHvtk5D32ych77ZOQ99snIe+2TkPfbJyHvtk5D32ych77ZOQ99snIe+2TkPfbJyHvtk5D32ych77ZOQ99snIe+2TkPfbJyHvtk5D32ych77ZOQ99snIe+2TkPfbJyHvtk5D32ych77ZOQ99snIe+2TkPfbJyHvtk5D32ych77ZOQ99snIe+2TkPfbJyHvtk5D32ych77ZOQ99snIe+2TkPfbJyHvtk5D32ych77ZOQ99snIe+2TkPfbJyHvtk5D32ych77ZOQ99snIe+2TkPfbJyHvtk5D32ych77ZOQ99snIe+2TkPfbJyHvtk5D32ych77ZOQ99snIe+2TkPfbJyHvtk5D32ych77ZOQ99snIe+2TkPfbJyHvtk5D32ych77ZOQ99snIe+2TkPfbJyHvtk5D32ych77ZOQ99snIe+2TkPfbJyHvtk5D32ych77ZOQ99snIe+2TkPfbJyHvtk5D32ych77ZOQ99snIe+2TkPfbJyHvtk5D32ych77ZOQ9YAAD+/7ge///8guWF1yNf//yA/5Af8gP/4+KarTgZtUCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
 
 
@@ -27,4 +27,6 @@ RIFF
 UklGRi
 
 
-We need to convert to PNG forst before we put RIFF data in the BASE64 
+RIFF to PNG before we go to base64 --> 
+
+save() --> convert image ALWAYS to a PNG 
