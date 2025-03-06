@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        .background-image {
+            width: 100vw;
+            height: 100vh;
+            max-height: 100vw;
+
+            position: fixed;
+            top: 0;
+            left: 0;
+            
+            background-image: url('https://cdn.connectflow.app/prod/ACCOUNTbFWmHUDx/PI-ACCT-bFWmHUDx-1733309614132.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .content {
+            background-color: white;
+            z-index: 1;
+
+            margin-top: 100vw !important;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        li {
+            padding: 10px;
+            color: black;
+            font-size: 24px;
+        }
+    </style>
+
+    <div class="background-image"></div>
+
+    <div class="content">
+        <ul>
+            <li>Pieter</li>
+            <li>Pieter</li>
+
+            <li>Pieter</li>
+            <li>Pieter</li>
+            <li>Pieter</li>
+            <li>Pieter</li>
+            <li>Pieter</li>
+            <li>Pieter</li>
+            <li>Pieter</li>
+            <li>Pieter</li>
+            <li>Pieter</li>
+            <li>Pieter</li>
+            <li>Pieter</li>
+            <li>Pieter</li>
+            <li>Pieter</li>
+            <li>Pieter</li>
+            <li>Pieter</li>
+            <li>Pieter</li>
+            <li>Pieter</li>
+            <li>Pieter</li>
+            <li>Pieter</li>
+            <li>Pieter</li>
+            <li>Pieter</li>
+            <li>Pieter</li>
+            <li>Pieter</li>
+            <li>Pieter</li>
+            <li>Pieter</li>
+            <li>Pieter</li>
+            
+
+
+        </ul>
+    </div>
+    
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+        
+        // Background image animation
+        gsap.to('.background-image', {
+            height: '0vw', 
+            ease: 'none',
+            scrollTrigger: {
+                trigger: '.background-image',
+                start: 'top top',
+                end: 'bottom top',
+                scrub: 0,
+                markers: true // This will help us see the trigger points
+            }
+        });
+
+
+    </script>
+
+    <!-- Add ScrollToPlugin for smooth scrolling -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/ScrollToPlugin.min.js"></script>
+
+</body>
+</html>
