@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+
+
+
+    <style>
+
+
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-y: scroll;
+            overscroll-behavior: none;
+            background-color: #F7F7F7;
+        }
+
+
+        .background-container {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .background-image { 
+            top: 0;
+            left: 0;
+            width: 100%;
+            max-width: 500px;
+            max-height: 500px;
+            height: 100vw; /* Initial height */
+            background-image: url('https://cdn.connectflow.app/prod/ACCOUNTbFWmHUDx/PI-ACCT-bFWmHUDx-1733309614132.jpg');
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+
+            /* transition: all 0.2s ease; */
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            scroll-snap-align: start;
+            border-radius: 20px 20px 0 0;
+            background-color: #F7F7F7;
+            /* transition: all 0.2s ease; */
+            transition: box-shadow 0s ease !important;
+            box-shadow: 0px -25px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        .content h1 {
+            scroll-snap-align: start;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+
+        @media (min-width: 500px) {
+            .background-image{
+                margin-top: 50px;
+                border-radius: 100%;
+                max-width: 200px;
+                max-height: 200px;
+                /* transition: all 0.2s ease; */
+                
+            }
+
+            .content {
+                margin-top: 0px;
+                /* transition: all 0.2s ease; */
+                transition: box-shadow 0s ease !important;
+                box-shadow: 0px -10px 20px rgba(0, 0, 0, 0);
+            }
+
+        }
+
+
+        .logo-icon{
+            display: flex;
+            width: 100%;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        .logo-icon-image{
+            width: 75px;
+            height: 75px;
+            border-radius: 100%;
+            margin-top: calc(-75px / 2);
+            position: absolute;
+            margin-right: 35px;
+        
+        }
+
+    </style>
+</head>
+<body>
+
+
+    <div class="background-container">
+        <div class="background-image"></div>
+    </div>
+
+    <div class="logo-icon">
+        <img class="logo-icon-image" src="https://cdn.connectflow.app/prod/ACCOUNTmzkhUPTl/Frame%20587.jpg" alt="">
+    </div>
+
+    <div class="content">
+
+    </div>
+
+
+    <script>
+        const triggers = document.querySelectorAll('.content');
+    
+    triggers.forEach((trigger) => {
+      gsap.fromTo(
+        trigger, 
+        { yPercent: 0 },
+        {
+          yPercent: -30,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: trigger,
+            start: 'top bottom',
+            end: 'bottom top',
+            scrub: true,
+          },
+        }
+      );
+    });
+    </script>
+
+
+</body>
+</html>
