@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-y: scroll;
+            /* overscroll-behavior: none;*/
+            background-color: #F7F7F7;
+            font-family: 'Inter', sans-serif;
+        }
+
+
+        .background-container {
+            background-color: rgb(0, 0, 0, 0.5);
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .background-image { 
+            top: 0;
+            left: 0;
+            width: 100%;
+            max-height: 500px;
+            height: 60vw; /* Initial height */
+            background-image: url('https://content.presspage.com/uploads/2759/2ed6573d-f0dc-4288-854a-34c7a83a9263/1920_persfotoutrecht8.jpg?10000');
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+
+            /* transition: all 0.2s ease; */
+        }
+
+        .content {
+            height: 100vh;
+            scroll-snap-align: start;
+            margin-top: -20px;
+            border-radius: 20px 20px 0 0;
+            background-color: #F7F7F7;
+            /* transition: all 0.2s ease; */
+            transition: box-shadow 0s ease !important;
+            box-shadow: 0px -25px 50px rgba(0, 0, 0, 0.15);
+
+            padding: 20px;
+        }
+
+
+        @media (min-width: 500px) {
+
+
+
+            /* 
+            .background-image{
+                margin-top: 50px;
+                border-radius: 100%;
+                max-width: 200px;
+                max-height: 200px;
+                
+            }
+                */
+
+            .content {
+                margin-top: 0px;
+                /* transition: all 0.2s ease; */
+                transition: box-shadow 0s ease !important;
+                box-shadow: 0px -10px 20px rgba(0, 0, 0, 0);
+            }
+
+        }
+
+
+
+        .logo-icon{
+            display: flex;
+            width: 100%;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        .logo-icon-image{
+            width: 75px;
+            height: 75px;
+            border-radius: 100%;
+            margin-top: calc(-75px / 2);
+            position: absolute;
+            margin-right: 35px;
+        
+        }
+
+        .button-container{
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+            column-gap: 10px;
+        }
+        
+        .button-container button{
+            background-color: #000;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        .image-container{
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            margin-top: -150px;
+        }
+
+        .image{
+            width: 200px;
+            height: 200px;
+            border-radius: 200px;
+            /* border: 5px solid #F7F7F7; */
+            box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.25);
+        }
+
+        .text-container{
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="background-container">
+        <div class="background-image"></div>
+    </div>
+
+    <!--
+    <div class="logo-icon">
+        <img class="logo-icon-image" src="https://cdn.connectflow.app/prod/ACCOUNTmzkhUPTl/Frame%20587.jpg" alt="">
+    </div>
+    -->
+
+    <div class="content">
+
+        <div class="image-container">
+            <img class="image" src="https://cdn.connectflow.app/prod/ACCOUNTbFWmHUDx/PI-ACCT-bFWmHUDx-1733309614132.jpg" alt="">
+        </div>
+
+        <div class="text-container">
+        <h1>Pieter Post</h1>
+        <p>CEO &bull; Coolblue</p>
+
+        <p>Alles voor een glimlach</p>
+
+    </div>
+
+
+        <div class="button-container">
+        <button>Save</button>
+        <button>Connect</button>
+         </div>
+
+
+    </div>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const scrollY = window.scrollY;
+            const backgroundImage = document.querySelector('.background-image');
+            const scrollFactor = 0.5;
+            const newHeight = `calc(60vw - ${scrollY * scrollFactor}px)`;
+            backgroundImage.style.height = newHeight;
+        });
+
+        const contentSections = document.querySelectorAll('.content h1');
+        contentSections.forEach(section => {
+            section.addEventListener('scroll', () => {
+                section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        });
+    </script>
+</body>
+</html>
