@@ -7,6 +7,10 @@
 
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -14,82 +18,181 @@
         body {
             margin: 0;
             padding: 0;
-        
-
+            font-family: "Inter", sans-serif;
         }
 
         .background-image {
             width: 100vw;
             height: 100vh;
             max-height: 100vw;
-
             position: fixed;
             top: 0;
             left: 0;
-            
             background-image: url('https://cdn.connectflow.app/prod/ACCOUNTbFWmHUDx/PI-ACCT-bFWmHUDx-1733309614132.jpg');
             background-size: cover;
             background-position: center;
-      
+
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+
+    
         }
 
         .content {
             background-color: white;
-            z-index: 1;
-
+            z-index: 300;
             margin-top: 100vw !important;
+            padding: 20px;
         }
 
-        ul {
+        .gradient{
+            height: 150px;
+            width: 100%;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(0, 0, 0, 0.25));
+            z-index: 1;
+        }
+
+
+        .general{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            width: 100%;
+        }
+
+        .general-data h1, h2, p{
             margin: 0;
-            padding: 0;
-            list-style: none;
         }
 
-        li {
-            padding: 10px;
-            color: black;
-            font-size: 24px;
+        .general-data h1{
+            font-size: 30px;
+            margin-bottom: 5px;
         }
+
+        .general-data h2{
+            font-size: 20px;
+            opacity: 0.75;
+        }
+
+        .general-data p{
+            font-size: 16px;
+            margin-top: 5px;
+            opacity: 0.75;
+        }
+
+        .general-data{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        
+        .logo-icon{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        hr{
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border: 0;
+            height: 1px;
+            background: #000;
+            opacity: 0.25;
+        }
+
+
+        .buttons{
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .buttons button{
+            padding: 10px 20px;
+            border-radius: 12px;
+            width: 100%;
+            border: 0;
+        }
+
+        .save-button{
+            color: #000;
+            background-color: lightgray;
+        }
+
+        .connect-button{
+            background-color: #000;
+            color: #fff;
+        }
+
+        .items{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .item{
+            display: flex;
+            padding: 20px;
+            gap: 10px;
+            align-items: center;
+            background-color: lightgray;
+            border-radius: 12px;
+        }
+
+        .item-image{
+            width: 35px;
+            height: 35px;
+            background-color: #000;
+            border-radius: 8px;
+        }
+
     </style>
 
-    <div class="background-image"></div>
+    <div class="background-image">
+        <div class="gradient"></div>
+    </div>
 
     <div class="content">
-        <ul>
-            <li>Pieter</li>
-            <li>Pieter</li>
+        <div class="general">
+            <div class="general-data">
+            <h1 class="Name" >Midas Johannes Hofstra</h1>
+            <h2 class="Job" >CEO &bull; Coolblue</h2>
+            <p class="bio" >Alles voor een glimlach</p>
+        </div>
+        <img class="logo-icon" src="https://cdn.connectflow.app/prod/ACCOUNTmzkhUPTl/Frame%20587.jpg" alt="">
+    </div>
 
-            <li>Pieter</li>
-            <li>Pieter</li>
-            <li>Pieter</li>
-            <li>Pieter</li>
-            <li>Pieter</li>
-            <li>Pieter</li>
-            <li>Pieter</li>
-            <li>Pieter</li>
-            <li>Pieter</li>
-            <li>Pieter</li>
-            <li>Pieter</li>
-            <li>Pieter</li>
-            <li>Pieter</li>
-            <li>Pieter</li>
-            <li>Pieter</li>
-            <li>Pieter</li>
-            <li>Pieter</li>
-            <li>Pieter</li>
-            <li>Pieter</li>
-            <li>Pieter</li>
-            <li>Pieter</li>
-            <li>Pieter</li>
-            <li>Pieter</li>
-            <li>Pieter</li>
-            <li>Pieter</li>
-            <li>Pieter</li>
+    <div class="buttons">
+        <button class="save-button" >Save</button>
+        <button class="connect-button" >Connect</button>
+    </div>
 
+    <div class="items">
+        <div class="item">
+            <div class="item-image"></div>
+            <p class="item-title">Item</p>
+        </div>
+        <div class="item">
+            <div class="item-image"></div>
+            <p class="item-title">Item</p>
+        </div>
+        <div class="item">
+            <div class="item-image"></div>
+            <p class="item-title">Item</p>
+        </div>
+        <div class="item">
+            <div class="item-image"></div>
+            <p class="item-title">Item</p>
+        </div>
+        <div class="item">
+            <div class="item-image"></div>
+            <p class="item-title">Item</p>
+        </div>
 
-
-        </ul>
+    </div>
     </div>
     
     <script>
@@ -108,6 +211,26 @@
                 markers: false // This will help us see the trigger points
             }
         });
+
+        gsap.from('.background-image', { 
+            duration: 0.5, 
+            opacity: 0, 
+            y: 0, 
+            scale: 1.2, 
+            delay: 0.15 
+        });
+
+        /* 
+
+        gsap.from('.content', { 
+            duration: 0.5, 
+            opacity: 0, 
+            y: 100, 
+            scale: 1, 
+            delay: 0.3
+        });
+        */
+
 
 
     </script>
