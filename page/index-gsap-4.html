@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Inter", sans-serif;
+        }
+
+        .background-image {
+            width: 100vw;
+            height: 100vh;
+            max-height: 100vw;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-image: url('https://cdn.connectflow.app/prod/ACCOUNT1224/PI-ACCT-1224-1717595656597.png');
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+
+    
+        }
+
+        .content {
+            background-color: white;
+            z-index: 300;
+            margin-top: 100vw !important;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+            z-index: 10;
+        }
+
+        .gradient{
+    
+            padding-top: 50px;
+            width: 100%;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(0, 0, 0, 0.75));
+            z-index: 1;
+            display: flex;
+            
+        }
+
+
+        .general{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            width: 100%;
+        }
+
+        .general-data h1, h2, p{
+            margin: 0;
+        }
+
+        .general-data h1{
+            font-size: 30px;
+            margin-bottom: 5px;
+        }
+
+        .Job{
+            font-size: 18px;
+            opacity: 0.75;
+        }
+
+        .bio{
+            font-size: 16px;
+            opacity: 0.75;
+        }
+
+        .general-data{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            gap: 5px;
+            color: white;
+            width: 100%;
+        }
+        
+        .logo-icon{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        hr{
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border: 0;
+            height: 1px;
+            background: #000;
+            opacity: 0.25;
+        }
+
+
+        .buttons{
+            display: flex;
+            gap: 10px;
+           
+        }
+
+        .buttons button{
+            padding: 10px 20px;
+            border-radius: 12px;
+            width: 100%;
+            border: 0;
+        }
+
+        .save-button{
+            color: #000;
+            background-color: lightgray;
+        }
+
+        .connect-button{
+            background-color: #000;
+            color: #fff;
+        }
+
+        .items{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .item{
+            display: flex;
+            padding: 20px;
+            gap: 10px;
+            align-items: center;
+            background-color: lightgray;
+            border-radius: 12px;
+        }
+
+        .item-image{
+            width: 35px;
+            height: 35px;
+            background-color: #000;
+            border-radius: 8px;
+        }
+
+        .general-data-wrap{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            width: 100%;
+            padding: 20px;
+            column-gap: 20px;
+        }
+
+    </style>
+
+    <div class="background-image">
+        <div class="gradient">
+            <div class="general-data-wrap">
+                <div class="general-data">
+                <h1 class="Name" >Jan Willem Jongebreur</h1>
+                <h2 class="Job" >Algemeen Directeur <br> Ormer ICT</h2>
+            </div>  
+            <img class="logo-icon" src="https://cdn.connectflow.app/prod/ACCOUNTPzveTQBG/ormer-icon-2.jpg" alt="">
+        </div>
+        </div>
+    </div>
+
+    <div class="content">
+
+   
+
+    <div class="buttons">
+        <button class="save-button" >Save</button>
+        <button class="connect-button" >Connect</button>
+    </div>
+
+    <div class="bio">
+        <p>IT Detachering, IT beheer en Software Development</p>
+    </div>
+
+
+
+    <div class="items">
+        <div class="item">
+            <div class="item-image"></div>
+            <p class="item-title">Item</p>
+        </div>
+        <div class="item">
+            <div class="item-image"></div>
+            <p class="item-title">Item</p>
+        </div>
+        <div class="item">
+            <div class="item-image"></div>
+            <p class="item-title">Item</p>
+        </div>
+        <div class="item">
+            <div class="item-image"></div>
+            <p class="item-title">Item</p>
+        </div>
+        <div class="item">
+            <div class="item-image"></div>
+            <p class="item-title">Item</p>
+        </div>
+        <div class="item">
+            <div class="item-image"></div>
+            <p class="item-title">Item</p>
+        </div>
+        <div class="item">
+            <div class="item-image"></div>
+            <p class="item-title">Item</p>
+        </div>
+        <div class="item">
+            <div class="item-image"></div>
+            <p class="item-title">Item</p>
+        </div>
+        <div class="item">
+            <div class="item-image"></div>
+            <p class="item-title">Item</p>
+        </div>
+
+    </div>
+</div>
+    </div>
+    
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+        
+        // Background image animation
+        gsap.to('.background-image', {
+            height: '0vw', 
+            scale: 1.0,
+            ease: 'none',
+            scrollTrigger: {
+                trigger: '.background-image',
+                start: 'top top',
+                end: 'bottom top',
+                scrub: 0,
+                markers: false // This will help us see the trigger points
+            }
+        });
+
+        gsap.from('.background-image', { 
+            duration: 0.5, 
+            opacity: 0, 
+            y: 0, 
+            scale: 1.2, 
+            delay: 0,
+            borderRadius: "100px",
+        });
+
+
+
+        gsap.from('.content', { 
+            duration: 0.75, 
+            opacity: 0, 
+            y: 100, 
+            scale: 1, 
+            delay: 0
+        });
+
+
+
+    </script>
+
+    <!-- Add ScrollToPlugin for smooth scrolling -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/ScrollToPlugin.min.js"></script>
+
+</body>
+</html>
