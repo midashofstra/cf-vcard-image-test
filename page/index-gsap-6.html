@@ -16,6 +16,7 @@
 <body>
 
     <style>
+
         body {
             margin: 0;
             padding: 0;
@@ -174,13 +175,48 @@
             bottom: 0;
         }
 
-        
+
+        @media (min-width: 768px) {
+            .hero-wrapper{
+                max-width: 500px;
+                border-radius: 12px;
+            }
+
+            .hero-image, .gradient{
+                max-width: 500px;
+            }
+
+            .content{
+                max-width: 500px;
+                width: 100%;
+            }
+            
+            .hero-wrapper-wrapper{
+                margin-top: 50px;
+            }
+        }
+
+
+        .content-wrapper{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .hero-wrapper-wrapper{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
     </style>
 
-    <div class="hero-wrapper">
-        <div class="gradient">
-            <div class="general-data-wrap">
+
+    <div class="hero-wrapper-wrapper">
+        <div class="hero-wrapper">
+            <div class="gradient">
+                <div class="general-data-wrap">
                 <div class="general-data">
                 <h1 class="Name" >Jan Willem Jongebreur</h1>
                 <h2 class="Job" >Algemeen Directeur <br> Ormer ICT</h2>
@@ -190,6 +226,10 @@
         </div>
         <img class="hero-image"src="https://cdn.connectflow.app/prod/ACCOUNT1224/PI-ACCT-1224-1717595656597.png">
     </div>
+    </div>
+
+
+    <div class="content-wrapper">
 
     <div class="content">
 
@@ -248,6 +288,7 @@
     </div>
 </div>
     </div>
+</div>
     
     <script>
         gsap.registerPlugin(ScrollTrigger);
